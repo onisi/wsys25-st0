@@ -1,0 +1,51 @@
+/* 課題1: テキストスタイリング */
+.large-text {
+    /* TODO: ここに24pxのフォントサイズを設定 */
+}
+
+.colored-text {
+    /* TODO: ここに青色を設定 */
+}
+
+.bold-text {
+    /* TODO: ここに太字を設定 */
+}
+
+.center-text {
+    /* TODO: ここに中央揃えを設定 */
+}
+
+/* 課題2: ボックスレイアウト */
+.box {
+    /* 基本のボックススタイル（必要最小限） */
+    padding: 20px;
+    margin: 10px;
+}
+
+.box1 {
+    /* TODO: ここに赤い背景色を設定 */
+}
+
+.box2 {
+    /* TODO: ここに緑の背景色と白文字を設定 */
+}
+
+.box3 {
+    /* TODO: ここに青い背景色と角丸を設定 */
+}
+
+/* 課題3: レスポンシブデザイン基礎 */
+.responsive-grid {
+    /* TODO: ここにCSS Gridの設定を追加 */
+    /* ヒント: display: grid を使用 */
+    /* ヒント: grid-template-columns で列を設定 */
+}
+
+.grid-item {
+    /* 基本のグリッドアイテムスタイル */
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* TODO: メディアクエリを追加してレスポンシブ対応 */
+/* ヒント: @media (max-width: 768px) を使用 */
