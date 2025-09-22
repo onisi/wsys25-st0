@@ -60,7 +60,7 @@
             map.addLayer(mierune);
 
 
-            L.control.layers({
+            var layerControl = L.control.layers({
                 "OpenStreetMap": backgroundLayer,
                 "地理院地図(標準)": chiriinLayer,
                 "MIERUNE": mierune
@@ -81,9 +81,11 @@ fetch('./P29-21_27.geojson') // 大阪府の学校データのGeoJSONを非同�
   .then((res) => res.json())
   .then((json) => {
   // GeoJSONレイヤーを作成
-  L.geoJSON(json)
+  var marker2 = L.geoJSON(json)
   .bindPopup((layer) => layer.feature.properties.P29_004)    // ポップアップで学校名を表示
   .addTo(map); 
+      //
+      LayerControl.addOverlay(marker2,"学校")
   });
 
 
