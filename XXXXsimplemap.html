@@ -87,7 +87,7 @@ fetch('./P29-21_27.geojson') // 大阪府の学校データのGeoJSONを非同�
       //
       LayerControl.addOverlay(marker2,"学校")
   });
-            // ラインレイヤーを作成
+// ラインレイヤーを作成
 fetch("./line.geojson") // ラインデータの非同期読み込み
 	.then((response) => response.json())
 	.then((data) => {
@@ -96,8 +96,10 @@ fetch("./line.geojson") // ラインデータの非同期読み込み
 		"weight": 6,  // サイズ
 		"opacity": 0.65   // 透過度
 	})
-
-                    // 行政区域レイヤーを作成
+	map.addLayer(line)
+	LayerControl.addOverlay(line, "ルート")
+});
+            // 行政区域レイヤーを作成
             fetch("./N03-23_27_230101.geojson") // 行政区域データを非同期読み込み
                 .then((response) => response.json())
                 .then((data) => {
@@ -111,7 +113,7 @@ fetch("./line.geojson") // ラインデータの非同期読み込み
                     // GeoJSONレイヤに地図がフィットするように表示範囲を自動調整
                     map.fitBounds(selected_area.getBounds());
             });
-	map.addLayer(line)
+			map.addLayer(line)
 	LayerControl.addOverlay(line, "ルート")
 });
 
